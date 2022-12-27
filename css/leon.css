@@ -37,8 +37,8 @@ body{
     user-select: none;
 }
 .special-heading + p{
-    margin: -30px 0 0;
-    font-size: 20px;
+    margin: -30px 0 0 0;
+    font-size: 15px;
     text-align: center;
     color: #797979;
     text-transform: capitalize;
@@ -73,6 +73,16 @@ body{
 .grid-3{
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+}
+.ico-proparite{
+    font-size: 40px;
+    color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .ico-proparite{
+        font-size: 30px;
+    }
+    
 }
 /* End Global Roles ------------------------ */
 /* start header */
@@ -164,19 +174,21 @@ body{
     top: 50%;
     transform: translate(-50% , -50%);
     text-align: center;
-    width: 320px;
+    width: 346px;
     max-width: 100%;
 }
 .landing .intro-text h1{
     margin: 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 50px;
     color: var(--main-color);
+    user-select: none;
 }
 .landing .intro-text p{
     line-height: 1.8;
-    font-size: 19px;
+    font-size: 15px;
     text-transform: capitalize;
+    user-select: none;
 }
 /* end landing */
 /* start featuers section  */
@@ -191,9 +203,6 @@ body{
 .featuers .feat{
     text-align: center;
     padding: 20px;
-}
-.featuers .feat i{
-    color: var(--main-color);
 }
 .featuers .feat h3{
     font-weight: 800;
@@ -226,9 +235,7 @@ body{
     }
 }
 .services .services-content .srv i{
-    color: var(--main-color);
     flex-basis: 60px;
-    font-size: 30px;
 }
 .services .services-content .srv .text{
     flex: 1;
@@ -344,6 +351,13 @@ body{
     top: -30px;
     right: -100px;
     z-index: -1;
+}
+@media (max-width: 767px) {
+    .about .about-content .image::before,
+    .about .about-content .image::after{
+        display: none;
+
+    }
 }
 .about .about-content .image img{
     max-width: 100%;
